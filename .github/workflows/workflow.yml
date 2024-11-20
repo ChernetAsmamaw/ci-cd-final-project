@@ -48,7 +48,7 @@ jobs:
 
       - name: Run unit tests with nose
         run: |
-          nosetests -v --with-spec --spec-color --with-coverage --cover-package=app --cover-erase --cover-html
+          nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
 
   deploy:
     runs-on: ubuntu-latest
