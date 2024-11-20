@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.12-slim
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python 3.12
         uses: actions/setup-python@v2
         with:
@@ -48,14 +48,13 @@ jobs:
 
       - name: Run unit tests with nose
         run: |
-          pip install nose
           nosetests -v --with-spec --spec-color --with-coverage --cover-package=app --cover-erase --cover-html
 
   deploy:
     runs-on: ubuntu-latest
     container: python:3.12-slim
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python 3.12
         uses: actions/setup-python@v2
         with:
